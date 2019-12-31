@@ -1,6 +1,6 @@
 # dotfiles
 
-Dotfiles for my Macbook Pro 14,2 running macOS Catalina 10.15.
+Dotfiles for my Macbook Pro 15,1 running macOS Catalina 10.15.
 
 <p float="left">
     <img src="https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png" width="600" />
