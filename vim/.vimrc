@@ -35,6 +35,7 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('w0rp/ale')
 call minpac#add('wellle/targets.vim')
 call minpac#add('rstacruz/vim-closer')
+call minpac#add('ayu-theme/ayu-vim')
 endif "}}}
 
 command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
@@ -66,7 +67,6 @@ set shortmess+=cW
 set showmatch
 set splitright
 set tags=./tags;,tags
-set termguicolors
 set ttimeoutlen=0
 set undofile
 set undodir=~/.vim/undo
@@ -82,6 +82,8 @@ set t_Co=256
 syntax on
 
 set termguicolors
+let ayucolor="mirage"
+colorscheme ayu
 
 hi Normal guibg=NONE ctermbg=NONE
 
