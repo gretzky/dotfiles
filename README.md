@@ -2,13 +2,15 @@
 
 Dotfiles for my Macbook Pro 15,1 running macOS Catalina 10.15.
 
-| ![Auto ls with colors](https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png) |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| zsh w/ [starship prompt](https://starship.rs/) and [auto-color-ls](https://github.com/gretzky/auto-color-ls)                 |
+<figure>
+  <img src="https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png" width="650" />
+  <figcaption>zsh with <a href="https://starship.rs/">starship prompt</a> and <a href="https://github.com/gretzky/auto-color-ls">auto-color-ls</a>
+</figure>
 
-| ![Vim and tmux](https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png) |
-| --------------------------------------------------------------------------------------------------------------------- |
-| Vim and tmux                                                                                                          |
+<figure>
+  <img src="https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png" width="650">
+  <figcaption>Vim and tmux</figcaption>
+</figure>
 
 -   Terminal: [Alacritty](https://github.com/jwilm/alacritty) using zsh
 -   Window management: [yabai](https://github.com/koekeishiya/yabai)
