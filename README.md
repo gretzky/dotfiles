@@ -3,8 +3,8 @@
 Dotfiles for my Macbook Pro 14,2 running macOS Catalina 10.15.
 
 <p float="left">
-    <img src="https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png" width="300" />
-    <img src="https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png" width="300" />
+    <img src="https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png" width="500" />
+    <img src="https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png" width="500" />
 </p>
 
 ## Installation
