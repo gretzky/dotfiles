@@ -53,17 +53,25 @@ main() {
     install_brew
 
     printf "💻  Set macOS preferences\n"
-    ./macos/.macos
+    ./macos/.macos 
+
+    printf "🐍  Set Python to 3.7\n"
+    # setup pyenv / global python to 3.7.x
+    pyenv install 3.7.4 >/dev/null
+    pyenv global 3.7.4 >/dev/null
+    # dont set conda clutter in zshrc
+    conda config --set auto_activate_base false
+
+    printf "🌈  Installing colorls\n"
+    sudo gem install colorls >/dev/null
+
+    printf "👽  Installing Vundle\n"
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
     printf "🐗  Stow dotfiles\n"
     stow alacritty colorls fzf git nvim skhd starship tmux vim yabai z zsh
 
-    printf "🐍  Set Python to 3.7"
-    # setup pyenv / global python to 3.7.x
-    pyenv install 3.7.4 &> /dev/null
-    pyenv global 3.7.4 &> /dev/null
-    # dont set conda clutter in zshrc
-    conda config --set auto_activate_base false
+    printf "✨  Done!\n"
 }
 
 main

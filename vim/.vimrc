@@ -2,45 +2,27 @@
 set nocompatible
 filetype off
 
-" init minpac
-try
-    packadd minpac
-catch
-    fun! InstallPlug() " install minpac if not available
-        exe '!git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac'
-    endfun
-endtry
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-if exists('*minpac#init') "{{{
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
-call minpac#add('junegunn/fzf', { 'do': 'yes n \| ./install' })
-call minpac#add('junegunn/fzf.vim')
-call minpac#add('junegunn/vim-emoji')
-call minpac#add('junegunn/goyo.vim', { 'on': 'Goyo' })
-call minpac#add('junegunn/limelight.vim', { 'on': 'Goyo' })
-call minpac#add('itchyny/lightline.vim')
-call minpac#add('justinmk/vim-sneak')
-call minpac#add('scooloose/syntastic')
-call minpac#add('scooloose/nerdcommenter')
-call minpac#add('scooloose/nerdtree')
-call minpac#add('ryanoasis/vim-devicons')
-call minpac#add('mhinz/vim-signify')
-call minpac#add('sheerun/vim-polyglot')
-call minpac#add('tpope/vim-endwise')
-call minpac#add('tpope/vim-fugitive')
-call minpac#add('tpope/vim-repeat')
-call minpac#add('tpope/vim-rhubarb')
-call minpac#add('tpope/vim-surround')
-call minpac#add('w0rp/ale')
-call minpac#add('wellle/targets.vim')
-call minpac#add('rstacruz/vim-closer')
-call minpac#add('ayu-theme/ayu-vim')
-endif "}}}
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update('', {'do': 'call minpac#status()'})
-command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
-command! PackStatus packadd minpac | source $MYVIMRC | call minpac#status()
+Plugin 'junegunn/fzf', { 'do': 'yes n \| ./install' }
+Plugin 'junegunn/fzf.vim'
+Plugin 'junegunn/vim-emoji'
+Plugin 'junegunn/goyo.vim', { 'on': 'Goyo' }
+Plugin 'junegunn/limelight.vim', { 'on': 'Goyo' }
+Plugin 'itchyny/lightline.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'mhinz/vim-signify'
+Plugin 'dense-analysis/ale'
+Plugin 'rstacruz/vim-closer'
+Plugin 'joshdick/onedark.vim'
 
 " general settings
 filetype plugin indent on
@@ -82,140 +64,57 @@ set t_Co=256
 syntax on
 
 set termguicolors
-let ayucolor="mirage"
-colorscheme ayu
+colorscheme onedark
 
 hi Normal guibg=NONE ctermbg=NONE
 
-" Vim Sneak
-let g:sneak#label = 1
-let g:sneak#use_ic_scs = 1
-let g:sneak#absolute_dir = 1
-map f <Plug>Sneak_s
-map F <Plug>Sneak_S
-map t <Plug>Sneak_t
-map T <Plug>Sneak_T
-
-" Leader general mapping
-let mapleader = ","
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q<cr>
-nnoremap <leader>s <c-w>w
-nnoremap <leader>r :source ~/.config/nvim/init.vim<cr>
-nnoremap <silent><leader><cr> :let @/ = ""<cr>
-
-" Navigate properly when lines are wrapped
-nnoremap j gj
-nnoremap k gk
-
-" Use tab to jump between blocks, because it's easier
-nnoremap <tab> %
-vnoremap <tab> %
-
-" JS use 2 spaces
-autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
-
-" use fzf
-set rtp+=/usr/local/opt/fzf
-
-" FZF
-nnoremap <leader>h :History<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap <leader>t :Files<CR>
-
-" Ripgrep
-noremap <leader>rg <esc>:Rg<space>
-noremap <leader>rw <esc>:Rg <c-r><c-w>
-noremap <leader>rh <esc>:Rg<up><cr>
-
-" Vim-fugitive and vim-rhubarb
-noremap <silent> gb :Gblame<CR>
-noremap <silent> ghub :Gbrowse<CR>
-
-" notify file save
-autocmd BufWritePost * silent ! notify-send '✔️ % saved"
-
-" auto close brackets
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap { {}<left>
-inoremap [ []<left>
-inoremap {<CR> {<CR>}<ESC>0
-inoremap {;<CR> {<CR>};<ESC>0
-
-" ale
-let g:ale_completion_enabled = 1
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '× '
-let g:ale_sign_warning = '> '
-let g:ale_linters = {'javascript': ['standard']}
-hi ALEErrorSign ctermbg=NONE ctermfg=magenta
-
-" git gutter speed
-let g:gitgutter_realtime = 1
-let g:gitgutter_eager = 1
-let g:gitgutter_max_signs = 1500
-let g:gitgutter_diff_args = '-w'
-
-" distraction free writing mode
-let g:limelight_conceal_ctermfg = 240
-function! s:goyo_enter()
-  Limelight
-  silent !tmux set status off
-  silent !tmux list-panes -F '\#F' | grep -q Z | tmux resize-pane -Z
-  set noshowmode
-  set noshowcmd
-  set wrap
-  set scrolloff=999
-endfunction
-
-function! s:goyo_leave()
-  Limelight!
-  silent !tmux set status on
-  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
-  set showmode
-  set showcmd
-  set nowrap
-  set scrolloff=0
-endfunction
-
-augroup goyoactions
-  au!
-  autocmd! User GoyoEnter nested call <SID>goyo_enter()
-  autocmd! User GoyoLeave nested call <SID>goyo_leave()
-augroup end
-
 " lightline
-set noruler
-set laststatus=2
 let g:lightline = {
-  \ 'colorscheme': 'wombat',
-  \ 'active': {
-  \   'left': [ [ 'filename' ],
-  \             [ 'gitbranch' ] ],
-  \   'right': [ [ 'lineinfo' ],
-  \              [ 'filetype' ] ]
-  \ },
-  \ 'separator': { 'left': '▓▒░', 'right': '░▒▓' },
-  \ 'subseparator': { 'left': '▒', 'right': '░' }
+  \ 'colorscheme': 'one',
   \ }
 
-" ale status
-augroup alestatus
-    au!
-    autocmd User ALELint call lightline#update()
-augroup end
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
 
-" nerdtree
-"autocmd vimenter * NERDTree
-let NERDTreeShowHidden=1
-let NERDTreeMinimalUI=1
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
 
-" devicons
-let g:webdevicons_enable = 1
-let g:webdevicons_enable_nerdtree = 1
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-let g:webdevicons_conceal_nerdtree_brackets = 0
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
 
-set noshowmode
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
+
+" NERD Tree {{
+" Show hidden files/directories
+let g:NERDTreeShowHidden = 1
+" Remove bookmarks and help text from NERDTree
+let g:NERDTreeMinimalUI = 1
+" Hide the Nerdtree status line to avoid clutter
+" let g:NERDTreeStatusline = ''
+" Hide certain files and directories from NERDTree
+let g:NERDTreeIgnore = ['^\.DS_Store$', '^tags$', '\.git$[[dir]]']
+" Mappings
+nnoremap <leader>n :NERDTreeToggle<cr>
+" map <C-n> :NERDTreeToggle<CR>
+" nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+" }}
+
+" map nerdtree
+map <C-b> :NERDTreeToggle<CR>
+
+" ale
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
