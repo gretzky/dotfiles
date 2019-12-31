@@ -15,7 +15,7 @@ This expands to [run.sh](https://github.com/gretzky/dotfiles/blob/master/run.sh)
 
 ### Customization
 
-- The 'highlight color' (accent color for mac, typically blue) is set to pink. To set it to a different color:
+- The ['highlight color'](https://github.com/gretzky/dotfiles/blob/ad8580a0898c416528cc44e451cc36044d4c299a/macos/.macos#L22-L23) (accent color for mac, typically blue) is set to pink. To set it to a different color:
     - Pick your desired color and get its RGB value (ex. pink is `255,105,180`)
     - Take each value and divide it by 255 (ex. pink is now `1, 0.41176470588, 0.70588235294`)
     - Put them into RGB order (ex. pink is `"1 0.41176470588 0.70588235294"`)
