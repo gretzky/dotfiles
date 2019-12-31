@@ -8,9 +8,9 @@ Dotfiles for my Macbook Pro 14,2 running macOS Catalina 10.15.
 
 To install:
 
-`curl -L | sh`
+`curl -L https://git.io/JeA7g | sh`
 
-This expands to [run.sh]() which will fetch this repo and run the install script.
+This expands to [run.sh](https://github.com/gretzky/dotfiles/blob/master/run.sh) which will fetch this repo and run the install script.
 
 
 ### Customization
