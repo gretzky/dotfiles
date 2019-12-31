@@ -1,11 +1,10 @@
 # dotfiles
 
-Dotfiles for my Macbook Pro 15,1 running macOS Catalina 10.15.
+Dotfiles for my Macbook Pro 15,1 running macOS Catalina 10.15. zsh, vim, tmux, etc.
 
-<p float="left">
-    <img src="https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png" width="650" />
-    <img src="https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png" width="650" />
-</p>
+| ![Auto ls with colors](https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png) | ![Vim and tmux](https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png) |
+| ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| zsh with [auto-color-ls](https://github.com/gretzky/auto-color-ls)                                                           | Vim with tmux                                                                                                         |
 
 ## Installation
 
@@ -18,6 +17,9 @@ To install:
 This expands to [run.sh](https://github.com/gretzky/dotfiles/blob/master/run.sh) which will fetch this repo and run the install script.
 
 ## Features
+
+-   Terminal: [Alacritty](https://github.com/jwilm/alacritty)
+-   Vim
 
 ### Customization
 
