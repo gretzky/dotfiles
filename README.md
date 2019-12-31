@@ -2,17 +2,10 @@
 
 Dotfiles for my Macbook Pro 15,1 running macOS Catalina 10.15.
 
-<figure>
-  <img src="https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png" width="650" />
-  <figcaption>zsh with <a href="https://starship.rs/">starship prompt</a> and <a href="https://github.com/gretzky/auto-color-ls">auto-color-ls</a>
-</figure>
+![zsh with starship prompt and colorls](https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png)
+![vim and tmux](https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png)
 
-<figure>
-  <img src="https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png" width="650">
-  <figcaption>Vim and tmux</figcaption>
-</figure>
-
--   Terminal: [Alacritty](https://github.com/jwilm/alacritty) using zsh
+-   Terminal: [Alacritty](https://github.com/jwilm/alacritty) using zsh w/ [starship prompt](https://starship.rs/) and [color-ls](https://github.com/athityakumar/colorls)
 -   Window management: [yabai](https://github.com/koekeishiya/yabai)
 -   Hotkeys: [skhd](https://github.com/koekeishiya/skhd)
 -   Vim: [neovim](https://neovim.io/) with [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins
@@ -35,7 +28,7 @@ This expands to [run.sh](https://github.com/gretzky/dotfiles/blob/master/run.sh)
     -   fzf
     -   z
     -   git
-    -   [colorls](https://github.com/athityakumar/colorls)
+    -   colorls
     -   skhd
     -   yabai
     -   starship
