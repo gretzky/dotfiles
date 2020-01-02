@@ -2,27 +2,27 @@
 set nocompatible
 filetype off
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" init vim-plug
+call plug#begin('~/.vim/plugged')
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" plugins
+Plug 'junegunn/fzf', { 'do': 'yes n \| ./install' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-emoji'
+Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
+Plug 'junegunn/limelight.vim', { 'on': 'Goyo' }
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'mhinz/vim-signify'
+Plug 'dense-analysis/ale'
+Plug 'rstacruz/vim-closer'
+Plug 'joshdick/onedark.vim'
 
-Plugin 'junegunn/fzf', { 'do': 'yes n \| ./install' }
-Plugin 'junegunn/fzf.vim'
-Plugin 'junegunn/vim-emoji'
-Plugin 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plugin 'junegunn/limelight.vim', { 'on': 'Goyo' }
-Plugin 'itchyny/lightline.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'mhinz/vim-signify'
-Plugin 'dense-analysis/ale'
-Plugin 'rstacruz/vim-closer'
-Plugin 'joshdick/onedark.vim'
+" finish plugins
+call plug#end()
 
 " general settings
 filetype plugin indent on

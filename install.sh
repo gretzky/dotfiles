@@ -65,8 +65,9 @@ main() {
     printf "🌈  Installing colorls\n"
     sudo gem install colorls >/dev/null
 
-    printf "👽  Installing Vundle\n"
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    printf "👽  Installing vim-plug\n"
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
     printf "🐗  Stow dotfiles\n"
     stow alacritty colorls fzf git nvim skhd starship tmux vim yabai z zsh

@@ -1,0 +1,83 @@
+# Improve color
+set -g default-terminal "screen-256color"
+set -ga terminal-overrides ",*:Tc"
+
+# Address vim mode switching delay
+set -sg escape-time 0
+
+# Enable mouse mode
+set -g mouse on
+
+# Increase scrollback buffer size
+set-option -g history-limit 5000
+
+# Start windows and panes at 1
+set -g base-index 1
+set -g renumber-windows on
+
+bind r source-file ~/.tmux.conf \; display-message "█▓░ ~/.tmux.conf reloaded."
+
+set -g status-bg default
+set -g status-fg default
+set-window-option -g window-status-style fg=default,bg=default
+set-window-option -g window-status-current-style fg=cyan,bold
+
+set -g status-left "🦕"
+set -g status-justify centre
+setw -g window-status-format         ' #(echo "#{pane_current_command}") '
+setw -g window-status-current-format ' #(echo "#{pane_current_command}") '
+set -g status-right " "
+
+# Panes settings
+set -g pane-border-style bg=default,fg=colour236
+set -g pane-active-border bg=default,fg=colour236
+
+unbind %
+bind b split-window -v -c "#{pane_current_path}"
+unbind '"'
+bind v split-window -h -c "#{pane_current_path}"
+unbind x
+bind x kill-pane
+bind-key "c" new-window -c "#{pane_current_path}"
+
+bind-key -r < swap-window -t -1
+bind-key -r > swap-window -t +1
+bind-key -r H resize-pane -L 10
+bind-key -r J resize-pane -D 10
+bind-key -r K resize-pane -U 10
+bind-key -r L resize-pane -R 10
+
+# Restoring Clear Screen (C-l)
+bind C-l send-keys 'C-l'
+
+# Use vi(m) key bindings
+setw -g mode-keys vi
+bind -T copy-mode-vi v send-keys -X begin-selection
+bind -T copy-mode-vi y send-keys -X copy-pipe "pbcopy"
+unbind -T copy-mode-vi Enter
+bind -T copy-mode-vi Enter send -X copy-pipe-and-cancel "pbcopy"
+bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe "pbcopy"
+
+bind-key -n M-1 select-window -t :1
+bind-key -n M-2 select-window -t :2
+bind-key -n M-3 select-window -t :3
+bind-key -n M-4 select-window -t :4
+bind-key -n M-5 select-window -t :5
+bind-key -n M-6 select-window -t :6
+bind-key -n M-7 select-window -t :7
+bind-key -n M-8 select-window -t :8
+bind-key -n M-9 select-window -t :9
+
+# tmux-prefix-highlight
+set -g @prefix_highlight_bg default
+set -g @prefix_highlight_show_copy_mode 'on'
+set -g @prefix_highlight_copy_mode_attr 'fg=black,bg=yellow'
+
+# Plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'tmux-plugins/tmux-battery'
+set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+run "~/.tmux/plugins/tpm/tpm"
