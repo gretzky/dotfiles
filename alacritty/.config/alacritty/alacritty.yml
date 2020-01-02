@@ -16,9 +16,9 @@ env:
 window:
     # Window dimensions in character columns and lines
     # (changes require restart)
-    dimensions:
-        columns: 80
-        lines: 24
+    #dimensions:
+    #    columns: 80
+    #    lines: 24
 
     # Adds this many blank pixels of padding around the window
     # Units are physical pixels; this is not DPI aware.
@@ -35,7 +35,7 @@ window:
     #   bar buttons
     # - `buttonless`: Window with title bar with transparent background and no
     #   title bar buttons
-    decorations: transparent
+    decorations: buttonless
 
 scrolling:
     # How many lines of scrollback to keep,
@@ -115,7 +115,7 @@ font:
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-# Colors (Tomorrow Night Bright)
+# Colors (Snazzy)
 colors:
     # Default colors
     primary:

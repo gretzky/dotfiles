@@ -19,7 +19,10 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-signify'
 Plug 'dense-analysis/ale'
 Plug 'rstacruz/vim-closer'
-Plug 'joshdick/onedark.vim'
+Plug 'Yggdroot/indentLine'
+Plug 'voldikss/vim-floaterm'
+Plug 'leafgarland/typescript-vim'
+Plug 'ayu-theme/ayu-vim'
 
 " finish plugins
 call plug#end()
@@ -64,7 +67,8 @@ set t_Co=256
 syntax on
 
 set termguicolors
-colorscheme onedark
+let ayucolor="mirage"
+colorscheme ayu
 
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -72,6 +76,13 @@ hi Normal guibg=NONE ctermbg=NONE
 let g:lightline = {
   \ 'colorscheme': 'one',
   \ }
+
+" IndentLine {{
+let g:indentLine_char = '|'
+let g:indentLine_first_char = '|'
+let g:indentLine_showFirstIndentLevel = 1
+let g:indentLine_setColors = 0
+" }}
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -114,7 +125,7 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 " }}
 
 " map nerdtree
-map <C-b> :NERDTreeToggle<CR>
+map <C-a> :NERDTreeToggle<CR>
 
 " ale
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let b:ale_fixers = {'javascript': ['prettier', 'eslint'] }
