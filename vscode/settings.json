@@ -1,16 +1,18 @@
 {
-    "workbench.colorTheme": "Ayu Mirage",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.iconTheme": "material-icon-theme",
-    "material-icon-theme.activeIconPack": "react_redux",
-    "material-icon-theme.folders.color": "#26a69a",
-    "material-icon-theme.saturation": 1,
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vscode_custom_css.imports": [
+        "file:///Users/sara/dotfiles/vscode/noicons.css"
+    ],
+    "vscode_custom_css.policy": true,
+    "breadcrumbs.symbolPath": "off",
+    "editor.cursorSmoothCaretAnimation": true,
     "editor.fontSize": 14,
     "editor.fontFamily": "Hack Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.tabCompletion": "on",
+    "editor.suggestSelection": "first",
     "editor.wordWrap": "wordWrapColumn",
-    "editor.tabSize": 2,
+    "explorer.confirmDragAndDrop": false,
     "files.exclude": {
         "**/node_modules": true,
         "**/.classpath": true,
@@ -18,20 +20,63 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "editor.formatOnSave": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "java.errors.incompleteClasspath.severity": "ignore",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment.line.double-slash",
+                    "comment",
+                    "string.quoted",
+                    "storage.type.function.arrow.js",
+                    "variable.language.default.js",
+                    "variable.other.module.js",
+                    "keyword.operator.relational.js"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "variable.other.module.js",
+                "settings": {
+                    "foreground": "#bfc7d5ff",
+                }
+            }
+        ],
+    },
+    "workbench.colorCustomizations": {
+        "editorOverviewRuler.addedForeground": "#0000",
+        "editorOverviewRuler.modifiedForeground": "#0000",
+        "editorOverviewRuler.deletedForeground": "#0000",
+        "editorOverviewRuler.border": "#0000",
+        "editorOverviewRuler.wordHighlightForeground": "#0000",
+        "editorOverviewRuler.errorForeground": "#0000",
+        "editorOverviewRuler.warningForeground": "#0000",
+        "editorOverviewRuler.infoForeground": "#0000",
+        "editorOverviewRuler.selectionHighlightForeground": "#f000",
+        "editor.selectionHighlightBorder": "#f000",
+        "editorGroupHeader.tabsBackground": "#31364A",
+        "tab.border": "#31364A",
+        "editorGroupHeader.noTabsBackground": "#1F2430",
+        "activityBar.background": "#1F2430",
+        "activityBar.border": "#1F2430",
+        "titleBar.activeBackground": "#1F2430",
+        "titleBar.inactiveBackground": "#1F2430"
+    },
+    "material-icon-theme.folders.theme": "specific",
+    "python.linting.enabled": false,
     "python.jediEnabled": false,
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "terminal.external.osxExec": "Alacritty",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "window.title": "",
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Ayu Mirage",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.statusBar.visible": true,
+    "zenMode.centerLayout": false,
+    "zenMode.fullScreen": false,
+    "zenMode.restore": true,
+    "explorer.confirmDelete": false,
 }
