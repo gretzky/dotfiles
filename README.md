@@ -1,6 +1,6 @@
 # dotfiles
 
-Dotfiles for my Macbook Pro 15,1 running macOS Big Sur 11.01.
+Dotfiles for my Macbook Pro 15,1 running macOS Big Sur 11.2.3.
 
 ![zsh with starship prompt and colorls](https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png)
 ![vim and tmux](https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png)

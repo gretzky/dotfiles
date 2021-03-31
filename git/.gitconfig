@@ -17,8 +17,6 @@
   colorMoved = zebra
 [push]
   default = current
-[merge]
-  ff = only
 [commit]
   verbose = true
   # template = ~/.gitmessage

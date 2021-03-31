@@ -50,5 +50,18 @@ export PATH=$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH
 # ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.rgrc
 
+# anaconda
+export PATH="/usr/local/anaconda3/bin:$PATH"
+
+# linux utils
+export PATH="/usr/local/opt/util-linux/bin:$PATH"
+export PATH="/usr/local/opt/util-linux/sbin:$PATH"
+
 # pyenv
 eval "$(pyenv init -)"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# asdf
+. /usr/local/opt/asdf/asdf.sh

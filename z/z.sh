@@ -214,7 +214,7 @@ alias ${_Z_CMD:-z}='_z 2>&1'
 
 [ "$_Z_NO_RESOLVE_SYMLINKS" ] || _Z_RESOLVE_SYMLINKS="-P"
 
-if type compctl >/dev/null 2>&1; then
+if type compctl &>/dev/null; then
     # zsh
     [ "$_Z_NO_PROMPT_COMMAND" ] || {
         # populate directory list, avoid clobbering any other precmds.
@@ -238,7 +238,7 @@ if type compctl >/dev/null 2>&1; then
         reply=(${(f)"$(_z --complete "$compl")"})
     }
     compctl -U -K _z_zsh_tab_completion _z
-elif type complete >/dev/null 2>&1; then
+elif type complete &>/dev/null; then
     # bash
     # tab completion
     complete -o filenames -C '_z --complete "$COMP_LINE"' ${_Z_CMD:-z}

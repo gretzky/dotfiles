@@ -28,7 +28,7 @@ antigen apply
 eval "$(starship init zsh)"
 
 # set pyenv
-if command -v pyenv 1>/dev/null 2>&1; then
+if command -v pyenv 1&>/dev/null; then
   eval "$(pyenv init -)"
 fi
 

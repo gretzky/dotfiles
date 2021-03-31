@@ -56,6 +56,7 @@ alias gcm="git commit --amend --message"
 # diff
 alias gdt="git difftool"
 alias gd="git diff --color"
+alias gitfix="git diff --name-only | uniq | xargs code"
 
 # grep
 alias ggl="git grep --line-number"
@@ -301,14 +302,14 @@ create-repo() {
 	curl -u gretzky https://api.github.com/user/repos -d "{\"name\": \"$REPONAME\", \"private\": $PRIVATE_TF}" >/dev/null
 
 	# first commit
-	git init >/dev/null
-	gi macos,visualstudiocode >>.gitignore >/dev/null
+	git init 1>/dev/null
+	gi macos,visualstudiocode >>.gitignore 1>/dev/null
 	print_success ".gitignore added"
-	git add . >/dev/null
-	git commit -m "initial commit" >/dev/null
+	git add . 1>/dev/null
+	git commit -m "initial commit" 1>/dev/null
 	print_success "initial commit"
-	git remote add origin https://github.com/gretzky/$REPONAME.git >/dev/null
-	git push -u origin master --force >/dev/null
+	git remote add origin https://github.com/gretzky/$REPONAME.git 1>/dev/null
+	git push -u origin master --force 1>/dev/null
 
 	sleep 0.5
 	print_success "\nRepo created"
@@ -368,8 +369,8 @@ tree() {
 # 🗑
 emptytrash() {
 	print_header "🗑  Emptying trashes..."
-	sudo rm -rfv /Volumes/*/.Trashes >/dev/null
-	rm -rfv ~/.Trash/* >/dev/null
-	sudo rm -v /private/var/vm/sleepimage >/dev/null
+	sudo rm -rfv /Volumes/*/.Trashes 1>/dev/null
+	rm -rfv ~/.Trash/* 1>/dev/null
+	sudo rm -v /private/var/vm/sleepimage 1>/dev/null
 
 }

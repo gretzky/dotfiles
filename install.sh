@@ -53,17 +53,28 @@ main() {
     install_brew
 
     printf "💻  Set macOS preferences\n"
-    ./macos/.macos 
+    ./macos/.macos
 
-    printf "🐍  Set Python to 3.7\n"
-    # setup pyenv / global python to 3.7.x
-    pyenv install 3.7.4 >/dev/null
-    pyenv global 3.7.4 >/dev/null
+    printf "📦  Set Node to LTS\n"
+    # install n for version management
+    yarn global add n 1>/dev/null
+    # make cache folder (if missing) and take ownership
+    sudo mkdir -p /usr/local/n
+    sudo chown -R $(whoami) /usr/local/n
+    # take ownership of Node.js install destination folders
+    sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/local/share
+    # install and use node lts
+    n lts
+
+    printf "🐍  Set Python to 3.9\n"
+    # setup pyenv / global python to 3.9.x
+    pyenv install 3.9.2 1>/dev/null
+    pyenv global 3.9.2 1>/dev/null
     # dont set conda clutter in zshrc
     conda config --set auto_activate_base false
 
     printf "🌈  Installing colorls\n"
-    sudo gem install colorls >/dev/null
+    sudo gem install colorls 1>/dev/null
 
     printf "👽  Installing vim-plug\n"
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
