@@ -42,7 +42,10 @@ This expands to [run.sh](https://github.com/gretzky/dotfiles/blob/master/run.sh)
 -   `Brewfile` (contains all homebrew packages, casks, and mac appstore apps)
 -   VSCode settings
 
-The install script will also setup a better Python environment with [pyenv](https://github.com/pyenv/pyenv) and set the global Python version to 3.7 instead of 2 (macOS default).
+The install script will also setup Python and Node versions/environments:
+
+-   [pyenv](https://github.com/pyenv/pyenv) sets the global Python version to 3.9
+-   [n](https://github.com/tj/n) sets the global Node version to LTS
 
 ### Customization
 
