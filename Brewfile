@@ -90,7 +90,6 @@ cask "the-unarchiver"
 cask "transmission"
 cask "ultimaker-cura"
 cask "visual-studio-code"
-cask "zoom"
 
 # install gradle here, since by now the jdk is installed
 brew "gradle"

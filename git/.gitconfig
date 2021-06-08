@@ -29,3 +29,5 @@
 [user]
 	name = gretzky
 	email = sfed617@gmail.com
+[pull]
+	rebase = false
