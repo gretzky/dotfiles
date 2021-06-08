@@ -27,11 +27,6 @@ antigen apply
 # set starship prompt
 eval "$(starship init zsh)"
 
-# set pyenv
-if command -v pyenv 1&>/dev/null; then
-  eval "$(pyenv init -)"
-fi
-
 # load the rest of the configs
 source $HOME/dotfiles/zsh/.exports
 source $HOME/dotfiles/zsh/.aliases

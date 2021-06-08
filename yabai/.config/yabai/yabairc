@@ -40,4 +40,6 @@ yabai -m config left_padding                 20
 yabai -m config right_padding                20
 yabai -m config window_gap                   10
 
+yabai -m rule --add app="zoom.us" manage=off
+
 echo "yabai configuration loaded.."

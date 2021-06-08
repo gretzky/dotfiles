@@ -42,6 +42,12 @@ build_xcode() {
     fi
 }
 
+install_app_store_apps() {
+    mas install 497799835 # Xcode
+    mas install 1195076754 # Pikka
+    mas install  506189836 # Harvest
+}
+
 main() {
     printf "🗄  Creating directories\n"
     create_dirs
@@ -51,6 +57,9 @@ main() {
 
     printf "🍺  Installing Homebrew packages\n"
     install_brew
+
+    printf "🛍️  Installing Mac App Store apps\n"
+    install_app_store_apps
 
     printf "💻  Set macOS preferences\n"
     ./macos/.macos

@@ -75,6 +75,10 @@ defaults write com.apple.helpviewer DevMode -bool true
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# Collapse clock into icon (use iStat Menus)
+# the clock can't be hidden entirely in big sur
+defaults write com.apple.menuextra.clock IsAnalog -bool true
+
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 

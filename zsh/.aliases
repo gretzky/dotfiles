@@ -279,6 +279,9 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 # 🔇
 alias stfu="osascript -e 'set volume output muted true'"
 
+# remove cached xcode build data
+alias xcodepurge="rm -rf ~/Library/Developer/Xcode/DerivedData"
+
 # use gitignore.io cmd line tool
 gi() {
 	curl -L -s https://www.gitignore.io/api/$@
@@ -373,4 +376,21 @@ emptytrash() {
 	rm -rfv ~/.Trash/* 1>/dev/null
 	sudo rm -v /private/var/vm/sleepimage 1>/dev/null
 
+}
+
+pyenv() {
+  local command
+  command="${1:-}"
+  if [ "$#" -gt 0 ]; then
+    shift
+  fi
+
+  case "$command" in
+  rehash|shell)
+    eval "$(pyenv "sh-$command" "$@")"
+    ;;
+  *)
+    command pyenv "$command" "$@"
+    ;;
+  esac
 }
