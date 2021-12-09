@@ -10,6 +10,8 @@ install_brew() {
         sudo chown -R $(whoami) /usr/local/Homebrew
     fi
 
+    sudo softwareupdate --install-rosetta
+
     printf "Installing homebrew packages..."
     brew bundle
     sudo gem install colorls
@@ -43,8 +45,8 @@ build_xcode() {
 
 install_app_store_apps() {
     mas install 497799835 # Xcode
+    mas install 1509590766 # Mutekey
     mas install 1195076754 # Pikka
-    mas install  506189836 # Harvest
 }
 
 printf "🗄  Creating directories\n"
@@ -73,10 +75,10 @@ sudo chown -R $(whoami) /usr/local/bin /usr/local/lib /usr/local/include /usr/lo
 # install and use node lts
 n lts
 
-printf "🐍  Set Python to 3.9\n"
-# setup pyenv / global python to 3.9.x
-pyenv install 3.9.2 1>/dev/null
-pyenv global 3.9.2 1>/dev/null
+printf "🐍  Set Python to 3.10\n"
+# setup pyenv / global python to 3.10.x
+pyenv install 3.10 1>/dev/null
+pyenv global 3.10 1>/dev/null
 # dont set conda clutter in zshrc
 conda config --set auto_activate_base false
 

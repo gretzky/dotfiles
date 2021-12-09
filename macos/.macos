@@ -26,7 +26,7 @@ defaults write NSGlobalDomain AppleHighlightColor -string "1 0.41176470588 0.705
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 4
 
 # Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 # Disable the over-the-top focus ring animation
@@ -64,9 +64,6 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 
 # Disable automatic termination of inactive apps
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
-
-# Disable the crash reporter
-#defaults write com.apple.CrashReporter DialogType -string "none"
 
 # Set Help Viewer windows to non-floating mode
 defaults write com.apple.helpviewer DevMode -bool true
@@ -137,12 +134,10 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set language and text formats
-# Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
-# `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en" "nl"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
-defaults write NSGlobalDomain AppleMetricUnits -bool true
+defaults write NSGlobalDomain AppleLanguages -array "en"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=USD"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
+defaults write NSGlobalDomain AppleMetricUnits -bool false
 
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true

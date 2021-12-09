@@ -1,6 +1,6 @@
 # dotfiles
 
-Dotfiles for my Macbook Pro 15,1 running macOS Big Sur 11.2.3.
+Dotfiles for my M1 Macbook Pro 18,1 running macOS Monterey 12.0.1.
 
 ![zsh with starship prompt and colorls](https://user-images.githubusercontent.com/15176096/71632895-ff0d0980-2bde-11ea-966f-65e5d564361f.png)
 ![vim and tmux](https://user-images.githubusercontent.com/15176096/71633424-2f09dc00-2be2-11ea-9c15-a4f492b7ea68.png)
@@ -24,27 +24,30 @@ This expands to [run.sh](https://github.com/gretzky/dotfiles/blob/master/run.sh)
 ## File overview
 
 -   Configs for the following tools:
-    -   Alacritty
-    -   fzf
-    -   z
     -   git
-    -   colorls
-    -   skhd
-    -   yabai
-    -   starship
+    -   [Alacritty](./alacritty)
+    -   [colorls](./colorls)
+    -   [fzf](./fzf)
+    -   [neovim](./nvim)
+    -   [skhd](./skhd)
+    -   [starship](./starship)
+    -   [tmux](./tmux)
+    -   [VSCode](./vscode)
+    -   [yabai](./yabai)
+    -   [z](./z)
 -   Shell environment configs:
-    -   `.zshrc`
-    -   `.zlogin.sh`
-    -   `.zshenv.sh`
     -   [Antigen](https://github.com/zsh-users/antigen) for zsh plugin management
-    -   `.aliases`
-    -   `.exports`
--   `Brewfile` (contains all homebrew packages, casks, and mac appstore apps)
--   VSCode settings
+    -   [`.zshrc`](./zsh/.zshrc)
+    -   [`.zlogin.sh`](./zsh/.zlogin.sh)
+    -   [`.zshenv.sh`](./zsh/.zshenv.sh)
+    -   [`.aliases`](./zsh/.aliases)
+    -   [`.exports`](./zsh/.exports)
+-   [`Brewfile`](./Brewfile) - contains all homebrew packages, casks, and mac appstore apps
+-   [VSCode settings](./vscode/settings.json)
 
 The install script will also setup Python and Node versions/environments:
 
--   [pyenv](https://github.com/pyenv/pyenv) sets the global Python version to 3.9
+-   [pyenv](https://github.com/pyenv/pyenv) sets the global Python version to 3.10
 -   [n](https://github.com/tj/n) sets the global Node version to LTS
 
 ### Customization

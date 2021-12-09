@@ -46,7 +46,7 @@ alias gbnm="git branch --no-merged"
 alias gchp="git cherry-pick"
 
 # clone
-alias gcl="clone"
+alias gcl="git clone"
 
 # commit
 alias gca="git commit -am"
@@ -365,9 +365,9 @@ gifify() {
 }
 
 # defaulting tree
-# tree() {
-# 	tree -aC -I '.git|node_modules|build|dist' --dirsfirst "$@" | less -FRNX
-# }
+tree() {
+	tree -aC -I '.git|node_modules|build|dist' --dirsfirst "$@"
+}
 
 # 🗑
 emptytrash() {
