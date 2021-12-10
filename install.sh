@@ -5,9 +5,8 @@ install_brew() {
         printf "Homebrew not found, installing."
         # install homebrew
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-        # change owner
-        sudo chown -R $(whoami) /usr/local/Cellar
-        sudo chown -R $(whoami) /usr/local/Homebrew
+        # set path
+        eval "$(/opt/homebrew/bin/brew shellenv)"
     fi
 
     sudo softwareupdate --install-rosetta
