@@ -48,8 +48,7 @@ alias gchp="git cherry-pick"
 alias gcl="git clone"
 
 # commit
-alias gca="git commit -am"
-alias gc="git commit -m"
+alias gc="git commit -am"
 alias gcm="git commit --amend --message"
 
 # diff
