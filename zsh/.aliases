@@ -285,6 +285,11 @@ alias stfu="osascript -e 'set volume output muted true'"
 # remove cached xcode build data
 alias xcodepurge="rm -rf ~/Library/Developer/Xcode/DerivedData"
 
+# git commit alias
+gcm() {
+    git commit -m "$1"
+}
+
 # use gitignore.io cmd line tool
 gi() {
 	curl -L -s https://www.gitignore.io/api/$@
