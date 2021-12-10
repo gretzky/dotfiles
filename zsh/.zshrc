@@ -18,7 +18,6 @@ antigen bundles <<EOBUNDLES
     zsh-users/zsh-autosuggestions
     zsh-users/zsh-completions
     djui/alias-tips
-    sobolevn/wakatime-zsh-plugin
     zsh-users/zsh-syntax-highlighting
     gretzky/auto-color-ls
 EOBUNDLES
