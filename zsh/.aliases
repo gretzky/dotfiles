@@ -12,7 +12,6 @@ alias g="git"
 # one letter aliases w/o options
 alias ga="git add"
 alias gb="git branch"
-# alias gc="git commit"
 alias gf="git fetch"
 alias gg="git grep"
 alias gl="git log"
@@ -50,7 +49,7 @@ alias gcl="git clone"
 
 # commit
 alias gca="git commit -am"
-# alias gc="git commit -m"
+alias gc="git commit -m"
 alias gcm="git commit --amend --message"
 
 # diff
@@ -284,11 +283,6 @@ alias stfu="osascript -e 'set volume output muted true'"
 
 # remove cached xcode build data
 alias xcodepurge="rm -rf ~/Library/Developer/Xcode/DerivedData"
-
-# git commit alias
-gc() {
-    git commit -m "$1"
-}
 
 # use gitignore.io cmd line tool
 gi() {
