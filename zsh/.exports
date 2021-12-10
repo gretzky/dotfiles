@@ -18,7 +18,7 @@ export SHELL=$(which zsh)
 export GPG_TTY=$(tty)
 
 # brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+PATH=$PATH:/opt/homebrew/bin
 
 # set rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
