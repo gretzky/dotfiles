@@ -12,7 +12,7 @@ alias g="git"
 # one letter aliases w/o options
 alias ga="git add"
 alias gb="git branch"
-alias gc="git commit"
+# alias gc="git commit"
 alias gf="git fetch"
 alias gg="git grep"
 alias gl="git log"
