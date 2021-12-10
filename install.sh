@@ -13,7 +13,6 @@ install_brew() {
 
     printf "Installing homebrew packages..."
     brew bundle
-    sudo gem install colorls
 }
 
 create_dirs() {
@@ -82,7 +81,7 @@ pyenv global 3.10 1>/dev/null
 conda config --set auto_activate_base false
 
 printf "🌈  Installing colorls\n"
-sudo gem install colorls 1>/dev/null
+arch -x86_64 sudo gem install clocale colorls 1>/dev/null
 
 printf "👽  Installing vim-plug\n"
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
