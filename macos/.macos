@@ -592,7 +592,6 @@ for app in "Activity Monitor" \
 	"Google Chrome" \
 	"Messages" \
 	"SystemUIServer" \
-	"Terminal" \
 	"Transmission" \
     "Twitter"; do
 	killall "${app}" &> /dev/null
