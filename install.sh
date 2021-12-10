@@ -4,7 +4,7 @@ install_brew() {
     if ! command -v "brew" &> /dev/null; then
         printf "Homebrew not found, installing."
         # install homebrew
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         # change owner
         sudo chown -R $(whoami) /usr/local/Cellar
         sudo chown -R $(whoami) /usr/local/Homebrew
