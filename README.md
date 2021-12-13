@@ -8,7 +8,7 @@ Dotfiles for my M1 Macbook Pro 18,1 running macOS Monterey 12.0.1.
 -   Terminal: [Alacritty](https://github.com/jwilm/alacritty) using zsh w/ [starship prompt](https://starship.rs/) and [color-ls](https://github.com/athityakumar/colorls)
 -   Window management: [yabai](https://github.com/koekeishiya/yabai)
 -   Hotkeys: [skhd](https://github.com/koekeishiya/skhd)
--   Vim: [neovim](https://neovim.io/) with [Vundle](https://github.com/VundleVim/Vundle.vim) to manage plugins
+-   Vim: [neovim](https://neovim.io/) with [vim-plug](https://github.com/junegunn/vim-plug) to manage plugins
 -   Tools: [tmux](https://github.com/tmux/tmux), [z](https://github.com/rupa/z), [fzf](https://github.com/junegunn/fzf)
 
 ## Installation
