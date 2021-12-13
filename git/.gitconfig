@@ -27,7 +27,7 @@
 [pager]
   branch = false
 [user]
-	name = Sara Pope
+	name = gretzky
 	email = sara@thepope.dev
 [pull]
 	rebase = false
