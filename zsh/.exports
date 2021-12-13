@@ -17,9 +17,10 @@ export GPG_TTY=$(tty)
 # brew
 PATH=$PATH:/opt/homebrew/bin
 
-# set rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# configure ruby
+source /opt/homebrew/opt/chruby/share/chruby.sh
+source /opt/homebrew/opt/chruby/share/auto.sh
+
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
