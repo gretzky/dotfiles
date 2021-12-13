@@ -18,9 +18,8 @@ export GPG_TTY=$(tty)
 PATH=$PATH:/opt/homebrew/bin
 
 # configure ruby
-source /opt/homebrew/opt/chruby/share/chruby.sh
-source /opt/homebrew/opt/chruby/share/auto.sh
-
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
