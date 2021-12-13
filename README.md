@@ -52,11 +52,16 @@ The install script will also setup Python and Node versions/environments:
 
 ### Customization
 
--   The ['highlight color'](https://github.com/gretzky/dotfiles/blob/ad8580a0898c416528cc44e451cc36044d4c299a/macos/.macos#L22-L23) (accent color for mac, typically blue) is set to pink. To set it to a different color:
+####  Git
+- Be sure to update the user name/email values in the global [gitconfig](./git/.gitconfig)
+#### Color Schemes
+
+- Alacritty color scheme is [Snazzy](https://github.com/sindresorhus/terminal-snazzy)
+- VSCode/Vim color scheme is [Ayu](https://github.com/dempfi/ayu)
+-   The macOS ['highlight color'](https://github.com/gretzky/dotfiles/blob/main/macos/.macos#L22-L23) (accent color for mac, typically blue) is set to pink. To set it to a different color:
     -   Pick your desired color and get its RGB value (ex. pink is `255,105,180`)
     -   Take each value and divide it by 255 (ex. pink is now `1, 0.41176470588, 0.70588235294`)
     -   Put them into RGB order (ex. pink is `"1 0.41176470588 0.70588235294"`)
-
 ## Acknowledgements
 
 -   [huyvohcmc/dotfiles](https://github.com/huyvohcmc/dotfiles)
