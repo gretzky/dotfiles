@@ -25,7 +25,7 @@ window:
     # (change requires restart)
     padding:
         x: 20
-        y: 10
+        y: 20
 
     # Window decorations
     # Available values:
@@ -194,9 +194,6 @@ colors:
 visual_bell:
     animation: EaseOutExpo
     duration: 0
-
-# Background opacity
-background_opacity: 1.0
 
 # Mouse bindings
 #

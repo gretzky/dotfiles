@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+# needed for monterey 12.0.1
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
 # bar settings
 yabai -m config status_bar                   off
 yabai -m config status_bar_text_font         "Helvetica Neue:Bold:12.0"
