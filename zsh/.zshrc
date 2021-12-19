@@ -29,3 +29,7 @@ eval "$(starship init zsh)"
 # load the rest of the configs
 source $HOME/dotfiles/zsh/.exports
 source $HOME/dotfiles/zsh/.aliases
+
+# start tmux on open
+[[ $- != *i* ]] && return
+[[ -z "$TMUX" ]] && exec tmux
