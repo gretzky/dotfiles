@@ -366,9 +366,9 @@ gifify() {
 }
 
 # defaulting tree
-tree() {
-	tree -aC -I '.git|node_modules|build|dist' --dirsfirst "$@"
-}
+# tree() {
+# 	tree -aC -I '.git|node_modules|build|dist' --dirsfirst "$@"
+# }
 
 # 🗑
 emptytrash() {

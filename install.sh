@@ -43,6 +43,7 @@ build_xcode() {
 
 install_app_store_apps() {
     mas install 497799835 # Xcode
+    mas install 1451685025 # WireGuard
     mas install 1509590766 # Mutekey
     mas install 1195076754 # Pikka
 }
