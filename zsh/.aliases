@@ -221,6 +221,12 @@ alias ych="yarn check"
 alias yt="yarn test"
 alias ycc="yarn cache clean"
 
+# pnpm
+alias pn="pnpm"
+alias pna="pnpm add"
+alias pnr="pnpm run"
+alias pni="pnpm install"
+
 # shortcuts
 alias md="mkdir"
 alias t="touch"

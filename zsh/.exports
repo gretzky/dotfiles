@@ -43,11 +43,10 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --smart-case --glob "!.
 export PATH=$PATH:$HOME/depot_tools
 
 # android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$ANDROID_HOME/emulator:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/tools/bin:$PATH
-export PATH=$ANDROID_HOME/platform-tools:$PATH
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+if [ -d $ANDROID_SDK_ROOT ]; then
+  PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$PATH"
+fi
 
 # ripgrep
 export RIPGREP_CONFIG_PATH=$HOME/.rgrc
@@ -62,6 +61,10 @@ export PATH="/usr/local/opt/util-linux/sbin:$PATH"
 # pyenv
 export PYENV_SHELL=zsh
 command pyenv rehash 2>/dev/null
+
+# pnpm
+export PNPM_HOME=$HOME/Library/pnpm
+export PATH=$PNPM_HOME:$PATH
 
 # direnv
 eval "$(direnv hook zsh)"

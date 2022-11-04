@@ -45,7 +45,8 @@ install_app_store_apps() {
     mas install 497799835 # Xcode
     mas install 1451685025 # WireGuard
     mas install 1509590766 # Mutekey
-    mas install 1195076754 # Pikka
+    mas install 1545870783 # System Color Picker
+    mas install 1450874784 # Transporter
 }
 
 printf "🗄  Creating directories\n"
