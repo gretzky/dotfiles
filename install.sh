@@ -47,6 +47,7 @@ install_app_store_apps() {
     mas install 1509590766 # Mutekey
     mas install 1545870783 # System Color Picker
     mas install 1450874784 # Transporter
+    mas install 1351639930 # Gifski
 }
 
 printf "🗄  Creating directories\n"
