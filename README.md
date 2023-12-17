@@ -54,12 +54,10 @@ The install script will also setup Python and Node versions/environments:
 
 ####  Git
 - Be sure to update the user name/email values in the global [gitconfig](./git/.gitconfig)
-
 #### Color Schemes
 
 - Alacritty color scheme is [Snazzy](https://github.com/sindresorhus/terminal-snazzy)
 - VSCode/Vim color scheme is [Ayu](https://github.com/dempfi/ayu)
-
 ## Acknowledgements
 
 -   [huyvohcmc/dotfiles](https://github.com/huyvohcmc/dotfiles)
