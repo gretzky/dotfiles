@@ -58,6 +58,8 @@ install_brew
 
 printf "🛍️  Installing Mac App Store apps\n"
 install_app_store_apps
+printf "🛠  Set Xcode path\n"
+sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 
 printf "💻  Set macOS preferences\n"
 ./macos/.macos
