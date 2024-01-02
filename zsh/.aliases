@@ -401,3 +401,15 @@ pyenv() {
     ;;
   esac
 }
+
+# rename a remote git branch and update it
+rename-branch() {
+    current_name=$1
+    new_name=$2
+    # rename the branch
+    git branch -m $current_name $new_name
+    # delete the old branch from remote and push the new name
+    git push origin :$current_name $new_name
+    # reset the upstream branch for the new_name local branch
+    git push origin -u $new_name
+}
